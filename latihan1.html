@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-image: url("https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80");
+            }
+            @keyframes animasi {
+                from{
+                    transform: translate(0,-100px);
+                }
+                to{
+                    transform: translate(0,1px);
+                }
+            }
+            .container{
+                width : 1300px;
+                height: 600px;
+                display: grid;
+            }
+            .geser{
+                width : 500px;
+                height: 250px;
+                align-self: center;
+                display: grid;
+                align-content: start;
+            }
+            .btn-container{
+                width : 400px;
+                height: 50px;
+                border : 2px solid white;
+                align-self: center;
+                display: grid;
+                justify-self: center;
+                border-radius: 5px;
+                justify-content: center;
+                align-content: center;
+            }
+            .btn-container:hover{
+                background-color: white;
+                color : black;
+            }
+            .btn-text{
+                font-size: 1cm;
+                color : white;
+            }
+            .btn-text:hover{
+                color : black;
+            }
+            .main-content{
+                width : 200px;
+                height: 100px;
+                border : 2px solid white;
+                display: none;
+                background-color: white;
+                justify-self: center;
+                align-self: end;
+                animation-name: animasi;
+                animation-timing-function: ease-in-out;
+                animation-duration: 1s;
+                border-radius: 5px;
+            }
+            .content-text{
+                font-size: 0.5cm;
+                justify-self : center;
+            }
+            .btn-main-content{
+                width: 50px;
+                height: 50px;
+                justify-self: end;
+                align-self: center;
+            }
+            .main{
+                width : 400px;
+                height: 300px;
+                justify-self: center;
+                align-self: center;
+                display: grid;
+                align-content: end;
+            }
+            .x-btn{
+                font-size: 0.5cm;
+                color : red;
+                justify-self: end;
+                align-items: end;
+            }
+            .x-container{
+                width : 20px;
+                height: 20px;
+            }
+            .here-container{
+                width : 100px;
+                height: 50px;
+                justify-self: center;
+                align-self: center;
+            }
+        </style> 
+        <body>
+            <div class = "container">
+                <div class = "main">
+                    <div class = "main-content">
+                        <div class = "x-container">
+                            <span class= "x-btn">X</span>
+                        </div>
+                            <span class = "content-text">Here i am!</span>
+                    </div>
+                </div>
+                <div class = "geser">
+              <div class = "btn-container"><span class = "btn-text">Where's Our Model</span> </div>
+                </div>
+            <script>
+                document.querySelector(".x-btn").onclick = function(){
+                    var main1  = document.querySelector(".main-content");
+                    main1.style.display = "none";
+                }
+               document.querySelector(".btn-container").onclick = function(){
+                    var main2 = document.querySelector(".main-content");
+                    main2.style.display = "grid"
+                }
+        </script>
+        </body>
+    </head>
+</html>
