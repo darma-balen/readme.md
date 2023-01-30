@@ -1,0 +1,27 @@
+function janji(){
+    return new Promise((resolve,reject) => {
+        let pertanyaan = prompt('uda kerja belum ?(u untuk udah,b untuk belum) ')
+        if(pertanyaan == 'u'){
+            let gaji = Number(prompt('berapakah gaji anda?'))
+            let total = 0.5 * gaji
+            setTimeout(() => {
+                resolve(`ini ${total} setengah uang gaji gw,Yang pernah gw janjikan untuk minjemin ke lu :)`)
+            },2000)
+
+        }else if(pertanyaan == 'b'){
+            setTimeout(() => {
+                reject('Sorry cok,Gw belum kerja nih!')
+            },2000)
+
+        }else{
+            console.log('invalid input')
+        }
+    })
+}
+janji()
+.then((pesan) => {
+    console.log(pesan)
+})
+.catch((err) => {
+    console.log(err)
+})
