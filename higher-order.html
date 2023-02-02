@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <style>
+        </style>
+        <body>
+            <script>
+        function luas_persegi(){
+            let panjang =  Number(prompt('masukkan nilai panjangnya!!'))
+            let lebar = Number(prompt('masukkan nilai lebar nya!!'))
+            let hasil = panjang * lebar
+            alert(hasil)
+        }
+        function luas_segitiga(){
+            let alas = Number(prompt('masukkan nilai alas nya!!'))
+             let tinggi = Number(prompt('masukkan nilai tingginya!!'))
+            let setengah_hasil = alas * tinggi
+            let hasil = setengah_hasil / 2
+                alert(hasil)
+         } 
+        
+     function luas(luas_persegi,luas_segitiga){
+        let question = prompt('luas segitiga atau persegi?(p = persegi,s = segitiga')
+          if(question == "p"){
+           luas_persegi()
+        }else if(question == "s"){
+            luas_segitiga()
+        }else{
+            alert('invalid input')
+        }
+   }
+  luas(luas_persegi,luas_segitiga)
+          </script>
+          </body>
+    </head>
+</html>
