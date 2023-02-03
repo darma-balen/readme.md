@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <style>
+        </style> 
+        <body>   
+            <script>
+                function luas(){
+                    let question = prompt('luas segitiga atau persegi?(p = persegi,s = segitiga)')
+                    if(question == "p"){
+                        document.write('<label> Panjang: <input type = "text" class = "ipt1" name = "panjang"></label>')
+                        document.write('</br>')
+                        document.write('<label> Lebar : <input type = "text" class = "ipt2" name = "lebar" ></label>')
+                        document.write('</br>')
+                        document.write('<input type = "submit" id = "btn1">')
+                        document.getElementById('btn1').onclick = function(){
+                            let panjang = document.querySelector('.ipt1').value;
+                            let lebar = document.querySelector('.ipt2').value;
+                            let hasil = panjang * lebar
+                            alert(hasil)
+                        }
+                        
+
+                    }else if(question == "s"){
+                        document.write('<label> Alas : <input type = "text" class = "ipt3" name = "alas"></label>')
+                        document.write( '</br>')
+                        document.write('<label>Tinggi : <input type = "text" class = "ipt4" name = "tinggi"></label>')
+                        document.write('</br>')
+                        document.write('<input type = "submit" id = "btn2">')
+                        document.getElementById("btn2").onclick = function(){
+                            let alas = document.querySelector('.ipt3').value ;
+                            let tinggi = document.querySelector('.ipt4').value;
+                            let setengah_hasil = alas * tinggi
+                            let hasil = setengah_hasil / 2
+                            alert(hasil)
+                        }
+
+                    }
+                }
+                luas()
+        </script>
+        </body> 
+    </head>
+</html>
