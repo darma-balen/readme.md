@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        </style> 
+        <body>
+         <script>
+            function Person(nama,umur){
+                this.nama = this.nama
+                this.umur = this.umur
+            }
+            Person.prototype.izin = function(n){
+                if(n <= umur){
+                   setTimeout(() => {
+                    alert('SIM akan diproses :),Lihat data di console')
+                   },2000) 
+                }else{
+                    setTimeout(() => {
+                        alert('belum diperbolehkan :(,Lihat data di console')
+                    },2000)
+                }
+            }
+            var nama = prompt('siapa nama anda?')
+            var umur = prompt('berapkah umur anda sekarang?')
+            let person = new Person(nama,umur)
+            person.izin(18)
+            const obj = {
+                nama : this.nama,
+                umur : this.umur
+            }
+            setTimeout(() => {
+                console.log(obj)
+            },4000)
+
+        </script>
+        </body>
+    </head>
+</html>
