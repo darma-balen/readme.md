@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <style>
+            body{
+                background-image: url('https://wallpapercave.com/wp/wp1906275.jpg');
+            }
+            h1{
+                color : red;
+            }
+            .container{
+                width : 600px;
+                height: 400px;
+                margin : auto auto;
+                padding : 50px 50px;
+                text-align: center;
+            }
+            .btn1{
+                width : 100px;
+                height: 100px;
+                background-color: red;
+                border : 2px solid black;
+                background-image: url('https://www.twu-iam.org/wp-content/uploads/2013/07/Play-Button.jpg');
+                background-size: cover;
+            }
+            .btn1:focus{
+                background-color: yellow;
+            }
+            .btn2{
+                width: 100px;
+                height: 100px;
+                background-color: white;
+                background-image: url('https://tse1.mm.bing.net/th?id=OIP.uECK69p_yJlCs_nDJ9QaFAHaHa&pid=Api&P=0');
+                background-size: cover;
+            }
+            .btn3{
+                width: 100px;
+                height: 100px;
+                background-image: url('https://tse1.mm.bing.net/th?id=OIP.C0gzJSSZNGKpwvnHlGRojQHaHa&pid=Api&P=0');
+                background-size: cover;
+            }
+        </style> 
+        <body>   
+            <div class="container">
+                <h1 class = "number"><span class = "hours">00</span>:<span class = "minutes">00</span>:<span class = "seconds">00</span></h1>
+                <button class = "btn1" onclick = "forward()"></button>
+                <button class = "btn2" onclick="button()"></button>
+                <button class = "btn3" onclick="reset()"></button>
+            </div>
+         <script>
+            let menit = 0 
+            let jam = 0
+            let detik = 0
+            let hours = document.querySelector('.hours')
+             let minutes = document.querySelector('.minutes')
+             let seconds = document.querySelector('.seconds')
+             let button1 = document.querySelector('.btn1')
+             let button2 = document.querySelector('.btn2')
+             let button3 = document.querySelector('.btn3')
+            // let interval = setInterval(increment,1000)
+             function increment(){
+                detik += 1
+                seconds.innerHTML = '0' + detik;
+                if(seconds.innerHTML > 9){
+                    seconds.innerHTML = detik
+              }else{
+                // no action
+              }
+              if(seconds.innerHTML == 60){
+                menit += 1
+                minutes.innerHTML = '0' + menit
+                detik = 1
+                seconds.innerHTML = '0' + detik++
+              }
+              else{
+                // do nothing
+              }
+              if(minutes.innerHTML == 60){
+                jam += 1
+                hours.innerHTML = '0' + jam
+                menit = 1
+                minutes.innerHTML = '0' + menit
+              }
+              
+          }
+             function forward(){
+            let interval = setInterval(increment,1000)
+
+             }
+             function button(){
+                clearInterval(interval)
+             }
+             function reset(){
+                detik = 0
+                menit = 0
+                jam = 0
+                seconds.innerHTML = '0' + detik
+                minutes.innerHTML = '0' + menit
+             }
+       </script>
+        </body> 
+    </head>
+</html>
