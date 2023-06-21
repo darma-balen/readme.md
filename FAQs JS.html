@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <style>
+            body{
+                background-color: black;
+            }
+            div{
+                width: 100px;
+                height: 150px;
+            }
+            .container{
+                width : 1000px;
+                height: 1000px;
+                color : white;
+                margin: auto auto;
+                display: grid;
+                grid-template-columns: 900px 100px;
+                grid-template-rows: 180px 180px 180px;
+                grid-row-gap: 50px;
+                grid-column-gap: 10px;
+            }
+            .header{
+                grid-column: 1 / span 2;
+                width: 1000px;
+                font-size: 70px;
+                display: grid;
+                align-content: end;
+                justify-content: center;
+            }
+            .box1-word{
+                width : 900px;
+                height: 190px;
+                font-size: 40px;
+                display: grid;
+            }
+            .box2-word{
+                width: 900px;
+                height: 190px;
+                font-size: 40px;
+                display: grid;
+            }
+            .box3-word{
+                width : 900px;
+                height: 190px;
+                font-size: 40px;
+                display: grid;
+            }
+            .img{
+                width : 70px;
+                height: 100px;
+            }
+        </style> 
+        <body>  
+            <div class = "container">
+                <div class = "header">FAQs</div>
+                <div class = "box1-word">What is JavaScript ? 
+                    <div class = "line1-1" style = "width: 900px; height: 0; border: 2px solid white;"></div>
+                    <p class = "para1" style = "font-size: 20px;">JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved.</p>
+                    <div class = "line1-2" style = "width: 900px; height: 0; border: 2px solid white; visibility: hidden;"></div>
+                </div>
+                <div class = "box1-image">
+                    <button class = "btn1"><img src = "https://tse3.mm.bing.net/th?id=OIP.q32IIvL-TL22n5mWuwbmzwHaHa&pid=Api&P=0&h=180" class = "img"></button>
+                </div>
+                <div class = "box2-word" class = "btn2">Is it easy to learn HTML and CSS ?
+                    <div class = "line2-1" style = "width : 900px; height: 0; border: 2px solid white;"></div>
+                    <p class = "para2" style = "font-size: 20px;">Cascading Style Sheets — or CSS — is the first technology you should start learning after HTML. While HTML is used to define the structure and semantics of your content, CSS is used to style it and lay it out. For example, you can use CSS to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features. </p>
+                    <div class = "line2-2" style = "width : 900px; height: 0; border: 2px solid white; visibility: hidden;"></div>
+                </div>
+                <div class = "box2-image">
+                    <button class = "btn2"><img src = "https://tse3.mm.bing.net/th?id=OIP.q32IIvL-TL22n5mWuwbmzwHaHa&pid=Api&P=0&h=180" class = "img"></button>
+                </div>
+                <div class = "box3-word">What is Web Development ?
+                    <div class = "line3-1" style = "width : 900px; height: 0; border : 2px solid white;"></div> 
+                    <p class = "para3" style = "font-size: 20px;">Web development is the act of building, creating and maintaining websites. The field encompasses a broad range of tasks including everything from coding, to technical design, to the performance of a website or application running on the internet.</p>
+                    <div class = "line3-2" style = "width : 900px; height: 0; border : 2px solid white; visibility: hidden;"></div> 
+                </div>
+                <div class = "box3-image">
+                    <button class = "btn3"><img src = "https://tse3.mm.bing.net/th?id=OIP.q32IIvL-TL22n5mWuwbmzwHaHa&pid=Api&P=0&h=180" class = "img"></button>
+                </div>
+            </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+         <script>
+             $('document').ready(function(){
+                 $('.btn1').click(function(){
+                     $('.para1').slideToggle()
+                     $('.line1').slideToggle()
+                 })
+                 $('.btn2').click(function(){
+                     $('.para2').slideToggle()
+                     $('.line2').slideToggle()
+                 })
+                 $('.btn3').click(function(){
+                     $('.para3').slideToggle()
+                     $('.line3').slideToggle()
+                 })
+             })
+       </script>
+        </body> 
+    </head>
+</html>
