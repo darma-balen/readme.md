@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: rgb(207, 234, 245);
+            margin: auto auto;
+        }
+
+        .container {
+            width: 800px;
+            height: 500px;
+            border: 10px solid white;
+            margin: 90px auto;
+            display: grid;
+            background-color: white;
+            /* grid-gap: 3px; */
+        }
+
+        .header {
+            height: 50px;
+            display: grid;
+            grid-template-columns: 300px 100px 250px 2px;
+        }
+
+        .header-Name {
+            font-size: 40px;
+        }
+
+        .header-Home {
+            font-size: 30px;
+        }
+
+        .header-Portofolio {
+            font-size: 30px;
+        }
+
+        .header-Contact {
+            font-size: 30px;
+        }
+
+        .main {
+            height: 300px;
+            display: grid;
+            grid-template-columns: 300px 500px;
+        }
+
+        .image-container {
+            height: 300px;
+        }
+
+        img {
+            height: 290px;
+
+        }
+
+        .content-container {
+            height: 300px;
+            display: grid;
+            width: 500px;
+        }
+
+        .hello-para {
+            height: 75px;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        .name-para {
+            height: 75px;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        .work-para {
+            height: 75px;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        .country-para {
+            height: 75px;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        .footer {
+            height: 130px;
+            display: grid;
+            grid-template-columns: 100px 100px 100px 100px;
+            grid-gap: 10px;
+            align-content: center;
+            justify-content: end;
+        }
+
+        .instagram-logo {
+            height: 50px;
+            width: 100px;
+            border-radius: 20px;
+        }
+
+        .twitter-logo {
+            height: 50px;
+            width: 100px;
+            border-radius: 20px;
+        }
+
+        .dribble-logo {
+            width: 100px;
+            height: 50px;
+            border-radius: 20px;
+        }
+
+        .behance-logo {
+            height: 50px;
+            width: 100px;
+            border: 20px;
+        }
+
+        @media (max-width : 768px) {
+            .container {
+                width: 85%;
+                height: 900px;
+                grid-template-rows: 100px 500px 200px;
+            }
+
+            .header {
+                width: 95%;
+                height: 100px;
+                display: grid;
+                grid-template-columns: 100px;
+                justify-content: center;
+            }
+
+            .header-Home {
+                visibility: hidden;
+            }
+
+            .header-Portofolio {
+                visibility: hidden;
+            }
+
+            .header-Contact {
+                visibility: hidden;
+            }
+
+            .main {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .image-container {
+                display: grid;
+                width: 450px;
+                justify-content: center;
+            }
+
+            img {
+                border-radius: 50%;
+            }
+
+            .content-container {
+                width: 95%;
+            }
+
+            .footer {
+                height: 250px;
+                display: grid;
+                align-content: end;
+                justify-content: start;
+            }
+
+            .instagram-logo {
+                height: 20px;
+                width: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-Name">Miya Ruma</div>
+            <div class="header-Home">Home</div>
+            <div class="header-Portofolio">Portofolio</div>
+            <div class="header-Contact">Contact</div>
+        </div>
+        <div class="main">
+            <div class="image-container">
+                <img src="Portrait.png">
+            </div>
+            <div class="content-container">
+                <div class="hello-para">Hello 👋</div>
+                <div class="name-para">I'm <span style="color : red;">Miya Ruma</span></div>
+                <div class="work-para">A Designer From</div>
+                <div class="country-para">Tokyo, Japan</div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="instagram-logo">
+                <img src="instagram.png" style="width: 90px; height: 90px;">
+            </div>
+            <div class="twitter-logo">
+                <img src="twitter-sign.png" style="width : 90px; height: 90px;">
+            </div>
+            <div class="dribble-logo">
+                <img src="dribbble-logo.png" style="width : 90px; height: 90px;">
+            </div>
+            <div class="behance-logo">
+                <img src="behance.png" style="width : 90px; height: 90px;">
+            </div>
+        </div>
+        <script>
+        </script>
+</body>
+
+</html>
