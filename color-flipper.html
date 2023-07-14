@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: #F1f5f8;
+        }
+
+        /* this is header part */
+        .header {
+            width: 100%;
+            height: 50px;
+            border: 2px solid white;
+            display: grid;
+            grid-template-columns: 500px 200px 200px;
+            grid-gap: 10px;
+            background-color: white;
+        }
+
+        .color-flipper-txt {
+            font-size: 30px;
+            display: grid;
+            color: #19A8B7;
+            justify-content: center;
+        }
+
+        .simple-txt {
+            font-size: 30px;
+            display: grid;
+            justify-content: end;
+        }
+
+        .hex-txt {
+            font-size: 30px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            color: #19A8B7;
+        }
+
+        /* this is content part */
+        .container {
+            width: 800px;
+            height: 600px;
+            margin: auto auto;
+            display: grid;
+            grid-template-rows: 100px 100px;
+            grid-gap: 15px;
+            align-content: center;
+        }
+
+        .content-container {
+            border: 2px solid black;
+            display: grid;
+            background-color: rgb(4, 1, 17);
+            grid-template-columns: 300px 300px;
+            align-content: center;
+            justify-content: end;
+            border-radius: 10px;
+        }
+
+        .background-txt {
+            font-size: 35px;
+            display: grid;
+            color: white;
+            justify-content: center;
+        }
+
+        .type-color-txt {
+            font-size: 35px;
+            color: rgb(74, 192, 202)
+        }
+
+        .button-container {
+            display: grid;
+            justify-content: center;
+        }
+
+        button {
+            width: 150px;
+            height: 50px;
+            border-radius: 8px;
+            background-color: #F1f5f8;
+            border: 3px solid black;
+        }
+
+        button:hover {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="color-flipper-txt"> Color Flipper</div>
+        <div class="simple-txt"><a href="project.html">Simple</a></div>
+        <div class="hex-txt"><a href="project.html">Hex</a></div>
+    </div>
+    <div class="container">
+        <div class="content-container">
+            <div class="background-txt">Background Color : </div>
+            <div class="type-color-txt">#F1f5f8</div>
+        </div>
+        <div class="button-container">
+            <button>CLICK ME</button>
+        </div>
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        // problemJS : nature of click() method in jQuery
+        //solutionJS :
+        $('document').ready(function () {
+            $('button').css('cursor', 'pointer')
+            $('button').click(function () {
+                let tipe = $('.type-color-txt').text()
+                switch (tipe) {
+                    case "#F1f5f8":
+                        $('.type-color-txt').text('Red')
+                        $('body').css('background-color', 'red')
+                        break;
+                    case "Red":
+                        $('.type-color-txt').text('#F15025')
+                        $('body').css('background-color', '#F15025')
+                        break;
+                    case "#F15025":
+                        $('.type-color-txt').text('Green')
+                        $('body').css('background-color', 'green')
+                        break;
+                    case "Green":
+                        $('.type-color-txt').text('Rgba(133,122,200)')
+                        $('body').css('background-color', 'Rgba(133,122,200)')
+                        $('.content-container').css('justify-content', 'center')
+                        break;
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
