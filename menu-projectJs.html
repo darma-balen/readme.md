@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: #eef3f7;
+            font-family: "Open Sans", sans-serif;
+            color: hsl(209, 61%, 16%);
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+
+        /* this is a menu text part */
+        .container {
+            width: 650px;
+            height: 150px;
+            margin: auto auto;
+            text-align: center;
+            font-size: 30px;
+            display: grid;
+            grid-template-rows: 100px 50px;
+        }
+
+        .menu-txt-container {
+            width: 100%;
+            display: grid;
+            align-content: center;
+            font-size: 40px;
+        }
+
+        .half-line.half-line::after {
+            content: '';
+            display: block;
+            width: 50%;
+            height: 5px;
+            background-color: #bdb814;
+            position: relative;
+            left: 25%;
+            bottom: -5px;
+        }
+
+        /* this is button  part */
+        .button-container {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 100px 100px 100px 100px 100px;
+            grid-gap: 5px;
+            justify-content: space-evenly;
+            font-size: 10px;
+        }
+
+        .All-btn {
+            border-radius: 5px;
+            background-color: white;
+            color: #bdb814;
+            font-size: 15px;
+            border: 2px solid #bdb814;
+            cursor: pointer;
+        }
+
+        .All-btn:hover {
+            background-color: #bdb814;
+            color: white;
+        }
+
+        .Breakfast-btn {
+            border-radius: 5px;
+            background-color: white;
+            color: #bdb814;
+            font-size: 15px;
+            border: 2px solid #bdb814;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .Breakfast-btn:hover {
+            background-color: #bdb814;
+            color: white;
+        }
+
+        .Lunch-btn {
+            border-radius: 5px;
+            background-color: white;
+            color: #bdb814;
+            font-size: 15px;
+            border: 2px solid #bdb814;
+            cursor: pointer;
+        }
+
+        .Lunch-btn:hover {
+            background-color: #bdb814;
+            color: white;
+        }
+
+        .Shakes-btn {
+            border-radius: 5px;
+            background-color: white;
+            color: #bdb814;
+            font-size: 15px;
+            border: 2px solid #bdb814;
+            cursor: pointer;
+        }
+
+        .Shakes-btn:hover {
+            background-color: #bdb814;
+            color: white;
+        }
+
+        .Dinner-btn {
+            border-radius: 5px;
+            background-color: white;
+            color: #bdb814;
+            font-size: 15px;
+            border: 2px solid #bdb814;
+            cursor: pointer;
+        }
+
+        .Dinner-btn:hover {
+            background-color: #bdb814;
+            color: white;
+        }
+
+        /* this is menu container part */
+        .menu-container {
+            width: 100%;
+            height: 300px;
+            display: grid;
+            grid-row-gap: 10px;
+            grid-template-columns: 600px 600px;
+            grid-template-columns: 50% 50%;
+        }
+
+        /*  this is right-food-container1 */
+        .right-food-container1 {
+            height: 300px;
+            display: grid;
+            border: 2px solid #eef3f7;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 600px 600px;
+            grid-gap: 5px;
+            grid-template-rows: 100px 100px 100px;
+            grid-template-areas: "i i i u u u"
+                "i i i  d d d";
+        }
+
+        .image-container11 {
+            grid-area: i;
+            height: 300px;
+        }
+
+        .upper-text-container11 {
+            display: grid;
+            grid-area: u;
+            grid-template-columns: 180px 100px;
+            grid-gap: 50px;
+        }
+
+        .food-name11 {
+            height: 50px;
+            display: grid;
+            align-content: center;
+            align-self: center;
+            font-size: 19px;
+        }
+
+        .food-price11 {
+            align-self: center;
+            height: 50px;
+            display: grid;
+            align-content: center;
+            font-size: 25px;
+            color: #bdb814;
+        }
+
+        .lower-text-container11 {
+            font-size: 15px;
+            width: 300px;
+            height: 100px;
+        }
+
+        /* this is left-food-container1 */
+        .left-food-container1 {
+            height: 300px;
+            display: grid;
+            border: 2px solid #eef3f7;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 600px 600px;
+            grid-gap: 5px;
+            grid-template-rows: 100px 100px 100px;
+            grid-template-areas: "i i i u u u"
+                "i i i  d d d";
+        }
+
+        .image-container12 {
+            grid-area: i;
+            height: 300px;
+        }
+
+        .upper-text-container12 {
+            display: grid;
+            grid-area: u;
+            grid-template-columns: 180px 100px;
+            grid-gap: 50px;
+        }
+
+        .food-name12 {
+            height: 50px;
+            display: grid;
+            align-content: center;
+            align-self: center;
+            font-size: 19px;
+        }
+
+        .food-price12 {
+            align-self: center;
+            height: 50px;
+            display: grid;
+            align-content: center;
+            font-size: 25px;
+            color: #bdb814;
+        }
+
+        .lower-text-container12 {
+            font-size: 15px;
+            grid-area: d;
+            width: 300px;
+            height: 100px;
+        }
+
+        /*this is right-food-container2  */
+        .right-food-container2 {
+            height: 300px;
+            display: grid;
+            border: 2px solid #eef3f7;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 600px 600px;
+            grid-gap: 5px;
+            grid-template-rows: 100px 100px 100px;
+            grid-template-areas: "i i i u u u"
+                "i i i  d d d";
+        }
+
+        .image-container21 {
+            grid-area: i;
+            height: 300px;
+        }
+
+        .upper-text-container21 {
+            display: grid;
+            grid-area: u;
+            grid-template-columns: 180px 100px;
+            grid-gap: 50px;
+        }
+
+        .food-name21 {
+            height: 50px;
+            display: grid;
+            align-content: center;
+            align-self: center;
+            font-size: 19px;
+        }
+
+        .food-price21 {
+            align-self: center;
+            height: 50px;
+            display: grid;
+            align-content: center;
+            font-size: 25px;
+            color: #bdb814;
+        }
+
+        .lower-text-container21 {
+            font-size: 15px;
+            grid-area: d;
+            width: 300px;
+            height: 100px;
+        }
+
+        /*this is left-food-container2 */
+        .left-food-container2 {
+            height: 300px;
+            display: grid;
+            border: 2px solid #eef3f7;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 600px 600px;
+            grid-gap: 5px;
+            grid-template-rows: 100px 100px 100px;
+            grid-template-areas: "i i i u u u"
+                "i i i  d d d";
+        }
+
+        .image-container22 {
+            grid-area: i;
+            height: 300px;
+        }
+
+        .upper-text-container22 {
+            display: grid;
+            grid-area: u;
+            grid-template-columns: 180px 100px;
+            grid-gap: 50px;
+        }
+
+        .food-name22 {
+            height: 50px;
+            display: grid;
+            align-content: center;
+            align-self: center;
+            font-size: 19px;
+        }
+
+        .food-price22 {
+            align-self: center;
+            height: 50px;
+            display: grid;
+            align-content: center;
+            font-size: 25px;
+            color: #bdb814;
+        }
+
+        .lower-text-container22 {
+            font-size: 15px;
+            grid-area: d;
+            width: 300px;
+            height: 100px;
+        }
+
+        /* this is right-food-container3 */
+        .right-food-container3 {
+            height: 300px;
+            display: grid;
+            border: 2px solid #eef3f7;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 600px 600px;
+            grid-gap: 5px;
+            grid-template-rows: 100px 100px 100px;
+            grid-template-areas: "i i i u u u"
+                "i i i  d d d";
+        }
+
+        .image-container31 {
+            grid-area: i;
+            height: 300px;
+        }
+
+        .upper-text-container31 {
+            display: grid;
+            grid-area: u;
+            grid-template-columns: 180px 100px;
+            grid-gap: 50px;
+        }
+
+        .food-name31 {
+            height: 50px;
+            display: grid;
+            align-content: center;
+            align-self: center;
+            font-size: 19px;
+        }
+
+        .food-price31 {
+            align-self: center;
+            height: 50px;
+            display: grid;
+            align-content: center;
+            font-size: 25px;
+            color: #bdb814;
+        }
+
+        .lower-text-container31 {
+            font-size: 15px;
+            grid-area: d;
+            width: 300px;
+            height: 100px;
+        }
+
+        /* this is left-food-container3  */
+        .left-food-container3 {
+            height: 300px;
+            display: grid;
+            border: 2px solid #eef3f7;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 600px 600px;
+            grid-gap: 5px;
+            grid-template-rows: 100px 100px 100px;
+            grid-template-areas: "i i i u u u"
+                "i i i  d d d";
+        }
+
+        .image-container32 {
+            grid-area: i;
+            height: 300px;
+        }
+
+        .upper-text-container32 {
+            display: grid;
+            grid-area: u;
+            grid-template-columns: 180px 100px;
+            grid-gap: 50px;
+        }
+
+        .food-name32 {
+            height: 50px;
+            display: grid;
+            align-content: center;
+            align-self: center;
+            font-size: 19px;
+        }
+
+        .food-price32 {
+            align-self: center;
+            height: 50px;
+            display: grid;
+            align-content: center;
+            font-size: 25px;
+            color: #bdb814;
+        }
+
+        .lower-text-container32 {
+            font-size: 15px;
+            grid-area: d;
+            width: 300px;
+            height: 100px;
+        }
+
+        /* this is right-food-container4 */
+        .right-food-container4 {
+            height: 300px;
+            display: grid;
+            border: 2px solid #eef3f7;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 600px 600px;
+            grid-gap: 5px;
+            grid-template-rows: 100px 100px 100px;
+            grid-template-areas: "i i i u u u"
+                "i i i  d d d";
+        }
+
+        .image-container41 {
+            grid-area: i;
+            height: 300px;
+        }
+
+        .upper-text-container41 {
+            display: grid;
+            grid-area: u;
+            grid-template-columns: 180px 100px;
+            grid-gap: 50px;
+        }
+
+        .food-name41 {
+            height: 50px;
+            display: grid;
+            align-content: center;
+            align-self: center;
+            font-size: 19px;
+        }
+
+        .food-price41 {
+            align-self: center;
+            height: 50px;
+            display: grid;
+            align-content: center;
+            font-size: 25px;
+            color: #bdb814;
+        }
+
+        .lower-text-container41 {
+            font-size: 15px;
+            grid-area: d;
+            width: 300px;
+            height: 100px;
+        }
+
+        /* this left-food-container4 */
+        .left-food-container4 {
+            height: 300px;
+            display: grid;
+            border: 2px solid #eef3f7;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 600px 600px;
+            grid-gap: 5px;
+            grid-template-rows: 100px 100px 100px;
+            grid-template-areas: "i i i u u u"
+                "i i i  d d d";
+        }
+
+        .image-container42 {
+            grid-area: i;
+            height: 300px;
+        }
+
+        .upper-text-container42 {
+            display: grid;
+            grid-area: u;
+            grid-template-columns: 180px 100px;
+            grid-gap: 50px;
+        }
+
+        .food-name42 {
+            height: 50px;
+            display: grid;
+            align-content: center;
+            align-self: center;
+            font-size: 19px;
+        }
+
+        .food-price42 {
+            align-self: center;
+            height: 50px;
+            display: grid;
+            align-content: center;
+            font-size: 25px;
+            color: #bdb814;
+        }
+
+        .lower-text-container42 {
+            font-size: 15px;
+            grid-area: d;
+            width: 300px;
+            height: 100px;
+        }
+
+        /* this is right-food-container5 */
+        .right-food-container5 {
+            height: 300px;
+            display: grid;
+            border: 2px solid #eef3f7;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 600px 600px;
+            grid-gap: 5px;
+            grid-template-rows: 100px 100px 100px;
+            grid-template-areas: "i i i u u u"
+                "i i i  d d d";
+        }
+
+        .image-container51 {
+            grid-area: i;
+            height: 300px;
+        }
+
+        .upper-text-container51 {
+            display: grid;
+            grid-area: u;
+            grid-template-columns: 180px 100px;
+            grid-gap: 50px;
+        }
+
+        .food-name51 {
+            height: 50px;
+            display: grid;
+            align-content: center;
+            align-self: center;
+            font-size: 19px;
+        }
+
+        .food-price51 {
+            align-self: center;
+            height: 50px;
+            display: grid;
+            align-content: center;
+            font-size: 25px;
+            color: #bdb814;
+        }
+
+        .lower-text-container51 {
+            font-size: 15px;
+            grid-area: d;
+            width: 300px;
+            height: 100px;
+        }
+
+        /* this is left-food-container5 */
+        .left-food-container5 {
+            height: 300px;
+            display: grid;
+            border: 2px solid #eef3f7;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 600px 600px;
+            grid-gap: 5px;
+            grid-template-rows: 100px 100px 100px;
+            grid-template-areas: "i i i u u u"
+                "i i i  d d d";
+        }
+
+        .image-container52 {
+            grid-area: i;
+            height: 300px;
+        }
+
+        .upper-text-container52 {
+            display: grid;
+            grid-area: u;
+            grid-template-columns: 180px 100px;
+            grid-gap: 50px;
+        }
+
+        .food-name52 {
+            height: 50px;
+            display: grid;
+            align-content: center;
+            align-self: center;
+            font-size: 19px;
+        }
+
+        .food-price52 {
+            align-self: center;
+            height: 50px;
+            display: grid;
+            align-content: center;
+            font-size: 25px;
+            color: #bdb814;
+        }
+
+        .lower-text-container52 {
+            font-size: 15px;
+            grid-area: d;
+            width: 300px;
+            height: 100px;
+        }
+
+        @media(max-width : 767px) {
+            .container {
+                width: 560px
+            }
+
+            .button-container {
+                width: 560px;
+                height: 50px;
+                justify-content: start;
+            }
+
+            .menu-txt-container {
+                width: 500px;
+                display: grid;
+                align-content: center;
+                font-size: 40px;
+                gap: 10px;
+            }
+
+            .menu-container {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .right-food-container1 {
+                display: flex;
+                flex-direction: column;
+                height: 500px;
+                justify-content: center;
+            }
+
+            .food-name11 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .food-price11 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .upper-text-container11 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .lower-text-container11 {
+                display: grid;
+                justify-content: center;
+                text-align: center;
+                width: 100%;
+            }
+
+            .image-container11 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .left-food-container1 {
+                display: flex;
+                flex-direction: column;
+                height: 500px;
+            }
+
+            .image-container12 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .upper-text-container12 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .food-name12 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .food-price12 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .lower-text-container12 {
+                display: grid;
+                justify-content: center;
+                width: 100%;
+                text-align: center;
+            }
+
+            .right-food-container2 {
+                display: flex;
+                flex-direction: column;
+                height: 500px;
+            }
+
+            .image-container21 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .upper-text-container21 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .food-name21 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .food-price21 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .lower-text-container21 {
+                display: grid;
+                justify-content: center;
+                width: 100%;
+                text-align: center;
+            }
+
+            .left-food-container2 {
+                display: flex;
+                flex-direction: column;
+                height: 500px;
+            }
+
+            .image-container22 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .upper-text-container22 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .food-name22 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .food-price22 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .lower-text-container22 {
+                display: grid;
+                justify-content: center;
+                width: 100%;
+                text-align: center;
+            }
+
+            .right-food-container3 {
+                display: flex;
+                flex-direction: column;
+                height: 500px;
+            }
+
+            .image-container31 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .upper-text-container31 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .food-name31 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .food-price31 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .lower-text-container31 {
+                display: grid;
+                justify-content: center;
+                width: 100%;
+                text-align: center;
+            }
+
+            .left-food-container3 {
+                display: flex;
+                flex-direction: column;
+                height: 500px;
+            }
+
+            .upper-text-container32 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .food-name32 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .food-price {
+                display: grid;
+                justify-content: center;
+            }
+
+            .image-container31 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .lower-text-container32 {
+                display: grid;
+                width: 100%;
+                text-align: center;
+                justify-content: center;
+            }
+
+            .right-food-container4 {
+                display: flex;
+                flex-direction: column;
+                height: 500px;
+            }
+
+            .image-container41 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .upper-text-container41 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .food-name41 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .food-price41 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .lower-text-container41 {
+                display: grid;
+                justify-content: center;
+                width: 100%;
+                text-align: center;
+            }
+
+            .left-food-container4 {
+                display: flex;
+                flex-direction: column;
+                height: 500px;
+            }
+
+            .image-container42 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .upper-text-container42 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .food-name42 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .food-price42 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .lower-text-container42 {
+                display: grid;
+                justify-content: center;
+                width: 100%;
+                text-align: center;
+            }
+
+            .right-food-container5 {
+                display: flex;
+                flex-direction: column;
+                height: 500px;
+            }
+
+            .image-container51 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .upper-text-container51 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .food-name51 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .food-price51 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .lower-text-container51 {
+                display: grid;
+                justify-content: center;
+                width: 100%;
+                text-align: center;
+            }
+
+            .left-food-container5 {
+                display: flex;
+                flex-direction: column;
+                height: 500px;
+            }
+
+            .image-container52 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .upper-text-container52 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .food-name52 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .food-price52 {
+                display: grid;
+                justify-content: center;
+            }
+
+            .lower-text-container52 {
+                display: grid;
+                justify-content: center;
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        /* for tablet design */
+        @media(min-width : 768px) and (max-width : 1200px) {
+            .menu-container {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu-txt-container"><span class="half-line">Our Menu</span>
+        </div>
+        <div class="button-container">
+            <button class="All-btn">All</button>
+            <button class="Breakfast-btn">Breakfast</button>
+            <button class="Lunch-btn">Lunch</button>
+            <button class="Shakes-btn">Shakes</button>
+            <button class="Dinner-btn">Dinner</button>
+        </div>
+    </div>
+    <div class="menu-container">
+        <div class="right-food-container1">
+            <div class="image-container11"><img
+                    src="https://vanilla-js-basic-project-8-menu.netlify.app/images/item-1.jpeg"
+                    style="width : 90%; height: 90%;" class="image11"></div>
+            <div class=" upper-text-container11">
+                <div class="food-name11">Buttermilk Pancakes</div>
+                <div class="food-price11">$15.99</div>
+            </div>
+            <div class="lower-text-container11">I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan
+                copper mug whatever cold-pressed</div>
+        </div>
+        <div class="left-food-container1">
+            <div class="image-container12"><img
+                    src="https://vanilla-js-basic-project-8-menu.netlify.app/images/item-2.jpeg"
+                    style="width : 90%; height: 90%;" class="image12"></div>
+            <div class="upper-text-container12">
+                <div class="food-name12">Diner Double</div>
+                <div class="food-price12">$13.99</div>
+            </div>
+            <div class="lower-text-container12">vaporware iPhone mumblecore selvage raw denim slow-carb leggings
+                gochujang helvetica man braid jianbing. Marfa thundercats</div>
+        </div>
+        <div class="right-food-container2">
+            <div class="image-container21"><img
+                    src="https://vanilla-js-basic-project-8-menu.netlify.app/images/item-3.jpeg"
+                    style="width : 83%; height: 83%;" class="image21"></div>
+            <div class="upper-text-container21">
+                <div class="food-name21">Godzilla Milkshake</div>
+                <div class="food-price21">$6.99</div>
+            </div>
+            <div class="lower-text-container21">ombucha chillwave fanny pack 3 wolf moon street art photo booth before
+                they sold out organic viral.</div>
+        </div>
+        <div class="left-food-container2">
+            <div class="image-container22"><img
+                    src="https://vanilla-js-basic-project-8-menu.netlify.app/images/item-4.jpeg"
+                    style="width : 90%; height: 90%;" class="image22"></div>
+            <div class="upper-text-container22">
+                <div class="food-name22">Country Delight</div>
+                <div class="food-price22">$20.99</div>
+            </div>
+            <div class="lower-text-container22">Shabby chic keffiyeh neutra snackwave pork belly shoreditch. Prism
+                austin mlkshk truffaut,</div>
+        </div>
+        <div class="right-food-container3">
+            <div class="image-container31"><img
+                    src="https://vanilla-js-basic-project-8-menu.netlify.app/images/item-5.jpeg"
+                    style="width : 90%; height: 90%;" class="image31"></div>
+            <div class="upper-text-container31">
+                <div class="food-name31">Egg Attack</div>
+                <div class="food-price31">$22.99</div>
+            </div>
+            <div class="lower-text-container31">franzen vegan pabst bicycle rights kickstarter pinterest meditation
+                farm-to-table 90's pop-up</div>
+        </div>
+        <div class="left-food-container3">
+            <div class="image-container32"><img
+                    src="https://vanilla-js-basic-project-8-menu.netlify.app/images/item-6.jpeg"
+                    style="width : 90%; height: 90%;" class="image32"></div>
+            <div class="upper-text-container32">
+                <div class="food-name32">Oreo Dream</div>
+                <div class="food-price32">$18.99</div>
+            </div>
+            <div class="lower-text-container32">Portland chicharrones ethical edison bulb, palo santo craft beer chia
+                heirloom iPhone everyday</div>
+        </div>
+        <div class="right-food-container4">
+            <div class="image-container41"><img
+                    src="https://vanilla-js-basic-project-8-menu.netlify.app/images/item-7.jpeg"
+                    style="width : 90%; height: 90%;" class="image41"></div>
+            <div class="upper-text-container41">
+                <div class="food-name41">Bacon Overflow</div>
+                <div class="food-price41">$8.99</div>
+            </div>
+            <div class="lower-text-container41">carry jianbing normcore freegan. Viral single-origin coffee live-edge,
+                pork belly cloud bread iceland put a bird</div>
+        </div>
+        <div class="left-food-container4">
+            <div class="image-container42"><img
+                    src="https://vanilla-js-basic-project-8-menu.netlify.app/images/item-8.jpeg"
+                    style="width : 90%; height: 90%;" class="image42"></div>
+            <div class="upper-text-container42">
+                <div class="food-name42">American Classic</div>
+                <div class="food-price42">$12.99</div>
+            </div>
+            <div class="lower-text-container42">on it tumblr kickstarter thundercats migas everyday carry squid palo
+                santo leggings. Food truck truffaut</div>
+        </div>
+        <div class="right-food-container5">
+            <div class="image-container51"><img
+                    src="https://vanilla-js-basic-project-8-menu.netlify.app/images/item-9.jpeg"
+                    style="width : 90%; height: 90%;" class="image51"></div>
+            <div class="upper-text-container51">
+                <div class="food-name51">Quarantine Buddy</div>
+                <div class="food-price51">$16.99</div>
+            </div>
+            <div class="lower-text-container51">skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb
+                yuccie crucifix microdosing.</div>
+        </div>
+        <div class="left-food-container5">
+            <div class="image-container52"><img
+                    src="https://vanilla-js-basic-project-8-menu.netlify.app/images/item-10.jpeg"
+                    style="width : 90%; height: 90%;" class="image52"></div>
+            <div class="upper-text-container52">
+                <div class="food-name52">Steak Dinner</div>
+                <div class="food-price52">$39.99</div>
+            </div>
+            <div class="lower-text-container52">skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb
+                yuccie crucifix microdosing.</div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        // problemJS : buat sistem yang lain soal action setelah click javascript
+        // solutionJS :
+        let allBtn = document.querySelector('.All-btn')
+        let breakfastBtn = document.querySelector('.Breakfast-btn')
+        let dinnerBtn = document.querySelector('.Dinner-btn')
+        let lunchBtn = document.querySelector('.Lunch-btn')
+        let shakesBtn = document.querySelector('.Shakes-btn')
+        allBtn.addEventListener('click', function () {
+            document.querySelector('.right-food-container1').style.display = 'grid'
+            document.querySelector('.left-food-container1').style.display = 'grid'
+            document.querySelector('.right-food-container2').style.display = 'grid'
+            document.querySelector('.left-food-container2').style.display = 'grid'
+            document.querySelector('.right-food-container3').style.display = 'grid'
+            document.querySelector('.left-food-container3').style.display = 'grid'
+            document.querySelector('.right-food-container4').style.display = 'grid'
+            document.querySelector('.left-food-container4').style.display = 'grid'
+            document.querySelector('.right-food-container5').style.display = 'grid'
+            document.querySelector('.left-food-container5').style.display = 'grid'
+        })
+        breakfastBtn.addEventListener('click', function () {
+            document.querySelector('.left-food-container5').style.display = 'none'
+            document.querySelector('.right-food-container5').style.display = 'none'
+            document.querySelector('.left-food-container3').style.display = 'none'
+            document.querySelector('.right-food-container3').style.display = 'none'
+            document.querySelector('.right-food-container2').style.display = 'none'
+            document.querySelector('.left-food-container1').style.display = 'none'
+            document.querySelector('.left-food-container4').style.display = 'none'
+            // display : grid
+            document.querySelector('.right-food-container4').style.display = 'grid'
+            document.querySelector('.left-food-container2').style.display = 'grid'
+            document.querySelector('.right-food-container1').style.display = 'grid'
+        })
+        lunchBtn.addEventListener('click', function () {
+            document.querySelector('.left-food-container5').style.display = 'none'
+            document.querySelector('.right-food-container5').style.display = 'none'
+            document.querySelector('.right-food-container4').style.display = 'none'
+            document.querySelector('.left-food-container3').style.display = 'none'
+            document.querySelector('.left-food-container2').style.display = 'none'
+            document.querySelector('.right-food-container2').style.display = 'none'
+            document.querySelector('.right-food-container1').style.display = 'none'
+            // display : grid property
+            document.querySelector('.left-food-container4').style.display = 'grid'
+            document.querySelector('.right-food-container3').style.display = 'grid'
+            document.querySelector('.left-food-container2').style.display = 'grid'
+
+        })
+        shakesBtn.addEventListener('click', function () {
+            var image11 = document.querySelector('.image11')
+            var image12 = document.querySelector('.image12')
+            var image13 = document.querySelector('.image13')
+            document.querySelector('.left-food-container5').style.display = 'none'
+            document.querySelector('.left-food-container4').style.display = 'none'
+            document.querySelector('.right-food-container4').style.display = 'none'
+            document.querySelector('.right-food-container3').style.display = 'none'
+            document.querySelector('.left-food-container2').style.display = 'none'
+            document.querySelector('.left-food-container1').style.display = 'none'
+            document.querySelector('.right-food-container1').style.display = 'none'
+            // display : grid
+            document.querySelector('.right-food-container5').style.display = 'grid'
+            document.querySelector('.left-food-container3').style.display = 'grid'
+            document.querySelector('.right-food-container2').style.display = 'grid'
+
+        })
+        dinnerBtn.addEventListener('click', function () {
+            document.querySelector('.right-food-container5').style.display = 'none'
+            document.querySelector('.left-food-container4').style.display = 'none'
+            document.querySelector('.right-food-container4').style.display = 'none'
+            document.querySelector('.left-food-container3').style.display = 'none'
+            document.querySelector('.right-food-container3').style.display = 'none'
+            document.querySelector('.left-food-container2').style.display = 'none'
+            document.querySelector('.right-food-container2').style.display = 'none'
+            document.querySelector('.left-food-container1').style.display = 'none'
+            document.querySelector('.right-food-container1').style.display = 'none'
+            // display : grid
+            document.querySelector('.left-food-container5').style.display = 'grid'
+        })
+    </script>
+</body>
+
+</html>
